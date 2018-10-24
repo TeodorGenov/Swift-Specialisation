@@ -1,0 +1,6 @@
+framework module Pods_LeagueInfo {
+  umbrella header "Pods-LeagueInfo-umbrella.h"
+
+  export *
+  module * { export * }
+}
