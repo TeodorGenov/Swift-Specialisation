@@ -47,7 +47,37 @@ class ChampionController: UIViewController {
 //    var item5: String = ""
 //    var item6: String = ""
     @IBAction func onButtonPressed(_ sender: Any) {
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("The Name is " + newName)
+        let background = #imageLiteral(resourceName: "bg-default-third")
+        self.view.backgroundColor = UIColor(patternImage: background)
+      
+//        button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+//        button.setTitle("Champions", for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//
+//        self.view.addSubview(button)
+//
+//        print(button.frame)
+//
+////        button.centerYAnchor.constraint(equalTo: btnDisplayChamp.centerYAnchor).isActive = true
+//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+////
+//        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//        
+//        // Do any additional setup after loading the view.
+//
+//        button.dropView.dropDownOptions = ["Amumu", "Rengar"]
+        
+        
+        //THIS IS LOADING CHAMPION INFO
         imageArray.removeAll()
+        do{
         if let path = Bundle.main.resourcePath {
             let imagePath = path + "/loading"
             let url = URL(fileURLWithPath: imagePath)
@@ -61,7 +91,7 @@ class ChampionController: UIViewController {
                 //                print("imageURLs: \(imageURLs)")
                 for image in imageURLs
                 {
-                    if(image.absoluteString.range(of: tfChampName.text!) != nil)
+                    if(image.absoluteString.range(of: self.name) != nil)
                     {
                         let data = NSData(contentsOf: image)
                         let uiImage = UIImage(data: data! as Data)
@@ -96,12 +126,12 @@ class ChampionController: UIViewController {
                     
                     for (key, champion) in champions {
                         let champPassive = champion["passive"] as! NSDictionary
-                        if(tfChampName.text! == champion["name"] as! String){
+                        if(self.name == champion["name"] as! String){
                             let championName = champion["name"] as! String
                             lblChampName.text! = championName
                             lblChampNick.text! = champion["title"] as! String
                             tvLore.text! = champion["lore"] as! String
-                            tvLore.text.replacingOccurrences(of: "<br>", with: " ")
+                            tvLore.text! = tvLore.text.replacingOccurrences(of: "<br>", with: " ")
                             let tipsPlaying = champion["allytips"] as! NSArray
                             let tipsFighting = champion["enemytips"] as! NSArray
                             tvTipsAgains.text = ""
@@ -119,30 +149,60 @@ class ChampionController: UIViewController {
                     if(tfChampName.text! == "Aatrox")
                     {
                         let ref = Database.database().reference()
-                        ref.child("aatrox/item1").observeSingleEvent(of: .value){(item1) in
-                            self.setArray.append((item1.value as? String)!)
-                            print(item1.value)
+                        do{
+                            
+                            
                         }
-                        ref.child("aatrox/item2").observeSingleEvent(of: .value){(item2) in
-                            self.setArray.append((item2.value as? String)!)
-                            print(item2.value)
+                        catch let error as NSError{
+                            print(error.description)
                         }
-                        ref.child("aatrox/item3").observeSingleEvent(of: .value){(item3) in
-                            self.setArray.append((item3.value as? String)!)
-                            print(item3.value)
+                        do{
+                            ref.child("aatrox/item2").observeSingleEvent(of: .value){(item2) in
+                                self.setArray.append(item2.value as! String)
+                            }    }
+                        catch let error as NSError{
+                            print(error.description)
                         }
-                        ref.child("aatrox/item4").observeSingleEvent(of: .value){(item4) in
-                            self.setArray.append((item4.value as? String)!)
-                            print(item4.value)
+                        do{
+                            ref.child("aatrox/item3").observeSingleEvent(of: .value){(item3) in
+                                self.setArray.append(item3.value as! String)
+                            }
+                            
                         }
-                        ref.child("aatrox/item5").observeSingleEvent(of: .value){(item5) in
-                            self.setArray.append((item5.value as? String)!)
-                            print(item5.value)
+                        catch let error as NSError{
+                            print(error.description)
                         }
-                        ref.child("aatrox/item6").observeSingleEvent(of: .value){(item6) in
-                            self.setArray.append((item6.value as? String)!)
-                            print(item6.value)
+                        do{
+                            ref.child("aatrox/item4").observeSingleEvent(of: .value){(item4) in
+                                self.setArray.append(item4.value as! String)
+                            }
+                            
                         }
+                        catch let error as NSError{
+                            print(error.description)
+                        }
+                        do{
+                            ref.child("aatrox/item5").observeSingleEvent(of: .value){(item5) in
+                                self.setArray.append(item5.value as! String!)
+                            }
+                            
+                        }
+                        catch let error as NSError{
+                            print(error.description)
+                        }
+                        do{
+                            ref.child("aatrox/item6").observeSingleEvent(of: .value){(item6) in
+                                self.setArray.append((item6.value as? String)!)
+                            }
+                            for i in 0..<setArray.count
+                            {
+                                print(setArray[i])
+                            }
+                        }
+                        catch let error as NSError{
+                            print(error.description)
+                        }
+                        
                         if let path = Bundle.main.resourcePath {
                             let imagePath = path + "/item"
                             let url = URL(fileURLWithPath: imagePath)
@@ -152,9 +212,7 @@ class ChampionController: UIViewController {
                                               URLResourceKey.creationDateKey,
                                               URLResourceKey.localizedTypeDescriptionKey]
                             do {
-                                
                                 let imageSetURLs = try fileManager.contentsOfDirectory(at: url as URL, includingPropertiesForKeys: properties, options:FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
-                                print(setArray)
                                 for imageSet in imageSetURLs
                                 {
                                     for i in 0..<setArray.count{
@@ -163,22 +221,20 @@ class ChampionController: UIViewController {
                                         {
                                             let dataSet = NSData(contentsOf: imageSet)
                                             let uiImageSet = UIImage(data: dataSet! as Data)
-                                            print(uiImageSet)
                                             setImageArray.append(uiImageSet!)
                                             
                                         }
                                     }
                                 }
-//                                print(setImageArray)
-//                                DispatchQueue.main.async
-//                                    {
-//                                        self.ivItem1.image = self.setImageArray[0]
-//                                        self.ivItem2.image = self.setImageArray[1]
-//                                        self.ivItem3.image = self.setImageArray[2]
-//                                        self.ivItem4.image = self.setImageArray[3]
-//                                        self.ivItem5.image = self.setImageArray[4]
-//                                        self.ivItem6.image = self.setImageArray[5]
-//                                }
+                                //                                DispatchQueue.main.async
+                                //                                    {
+                                //                                        self.ivItem1.image = self.setImageArray[0]
+                                //                                        self.ivItem2.image = self.setImageArray[1]
+                                //                                        self.ivItem3.image = self.setImageArray[2]
+                                //                                        self.ivItem4.image = self.setImageArray[3]
+                                //                                        self.ivItem5.image = self.setImageArray[4]
+                                //                                        self.ivItem6.image = self.setImageArray[5]
+                                //                                }
                             }
                         }
                         else{
@@ -197,38 +253,11 @@ class ChampionController: UIViewController {
             
         }
 
+        
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("The Name is " + newName)
-        let background = #imageLiteral(resourceName: "bg-default-third")
-        self.view.backgroundColor = UIColor(patternImage: background)
-        
-        
-        let ref = Database.database().reference()
-        ref.child("aatrox/item1").observeSingleEvent(of: .value){(snapshot) in
-            print(snapshot.value)
+        catch let error as NSError{
+            print(error.description)
         }
-//        button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-//        button.setTitle("Champions", for: .normal)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//
-//        self.view.addSubview(button)
-//
-//        print(button.frame)
-//
-////        button.centerYAnchor.constraint(equalTo: btnDisplayChamp.centerYAnchor).isActive = true
-//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-////
-//        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-//        
-//        // Do any additional setup after loading the view.
-//
-//        button.dropView.dropDownOptions = ["Amumu", "Rengar"]
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

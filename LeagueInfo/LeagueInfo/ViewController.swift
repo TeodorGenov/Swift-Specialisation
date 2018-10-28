@@ -216,7 +216,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         myCell.imageView?.image = myPicture
         myCell.selectionStyle = UITableViewCellSelectionStyle.gray
 //        let lolUrlHistory = "https://eun1.api.riotgames.com/lol/match/v3/matchlists/by-account/" + somename + "?api_key=RGAPI-28eb2c5d-10b2-4c06-a692-5bfddb46c423"
-        let lolUrlHistory = "https://eun1.api.riotgames.com/lol/match/v3/matchlists/by-account/33248469?api_key=RGAPI-c5b6f38f-79d9-49e1-b72b-ef8084a3f669"
+        let lolUrlHistory = "https://eun1.api.riotgames.com/lol/match/v3/matchlists/by-account/33248469?api_key=RGAPI-8635d316-5106-4fd9-bdf8-7b0ea670266a"
         let urlHistory = URL(string: lolUrlHistory)
         //        guard let url = URL(string: lolUrl) else {return}
         
@@ -231,7 +231,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     myCell.textLabel?.text = String(matches.matches[indexPath.row].gameId)
                     print(String(matches.matches[indexPath.row].gameId))
                 }
-                let urlPicture = URL(string: "https://eun1.api.riotgames.com/lol/match/v3/matches/" + String(matches.matches[indexPath.row].gameId) + "?api_key=RGAPI-c5b6f38f-79d9-49e1-b72b-ef8084a3f669")
+                let urlPicture = URL(string: "https://eun1.api.riotgames.com/lol/match/v3/matches/" + String(matches.matches[indexPath.row].gameId) + "?api_key=RGAPI-8635d316-5106-4fd9-bdf8-7b0ea670266a")
                 URLSession.shared.dataTask(with:urlPicture!){(data, response, error) in
                     guard let data = data else {return}
                     do
@@ -239,7 +239,6 @@ class ViewController: UIViewController, UITableViewDataSource {
                         guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
                         let match = Match(json: json)
                         let champion = match.champion
-                        print(champion)
                     }
                     catch let jsonErr
                     {
@@ -257,13 +256,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     var name: String = ""
     var thisName: String = ""
     @IBAction func showChamps(_ sender: Any) {
-        self.performSegue(withIdentifier: "ChampName", sender: self)
+//        self.performSegue(withIdentifier: "ChampName", sender: self)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ChampionController {
-            vc.newName = name
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? ChampionController {
+//            vc.newName = name
+//        }
+//    }
     @IBOutlet var viewController: UIView!
     @IBOutlet weak var profileIMage: UIImageView!
     @IBOutlet weak var tableViewChampions: UITableView!
@@ -289,8 +288,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 //        self.viewController.backgroundColor = UIColor(displayP3Red: 8, green: 23, blue: 70, alpha: 0)
         _ = String(33248469)
         let thisName = name
-        let lolUrl = "https://eun1.api.riotgames.com/lol/summoner/v3/summoners/by-name/" + name + "?api_key=RGAPI-c5b6f38f-79d9-49e1-b72b-ef8084a3f669"
-        print(name)
+        let lolUrl = "https://eun1.api.riotgames.com/lol/summoner/v3/summoners/by-name/xXRamseyXx?api_key=RGAPI-8635d316-5106-4fd9-bdf8-7b0ea670266a"
         guard let url = URL(string: lolUrl) else {return}
         
  

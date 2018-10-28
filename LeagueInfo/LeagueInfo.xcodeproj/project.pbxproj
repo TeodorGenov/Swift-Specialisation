@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3915D1A1961C0A5B850DA87A /* Pods_LeagueInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6D777B28252F768F22576B /* Pods_LeagueInfoTests.framework */; };
+		832101A42184D5F0000E36FC /* championImages in Resources */ = {isa = PBXBuildFile; fileRef = 832101A32184D5EF000E36FC /* championImages */; };
+		832101A62184D744000E36FC /* ChampionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832101A52184D743000E36FC /* ChampionCollectionViewController.swift */; };
+		832101A82184DBAD000E36FC /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832101A72184DBAD000E36FC /* myCell.swift */; };
 		83300850217E1060000FF7C1 /* item in Resources */ = {isa = PBXBuildFile; fileRef = 8330084F217E105F000FF7C1 /* item */; };
 		83A5417D2165FE0000E5ED99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A5417C2165FE0000E5ED99 /* LoginViewController.swift */; };
 		83B1FFFA21766A3C00D6C120 /* ChampionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1FFF921766A3C00D6C120 /* ChampionController.swift */; };
@@ -52,6 +55,9 @@
 		2DFA80E132AD3349D3A78253 /* Pods_LeagueInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1C323820AAA6BB5E917FEA /* Pods-LeagueInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeagueInfo/Pods-LeagueInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		3F25B8B07C708692C6CF41FF /* Pods-LeagueInfoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueInfoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeagueInfoUITests/Pods-LeagueInfoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		832101A32184D5EF000E36FC /* championImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = championImages; sourceTree = "<group>"; };
+		832101A52184D743000E36FC /* ChampionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCollectionViewController.swift; sourceTree = "<group>"; };
+		832101A72184DBAD000E36FC /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
 		8330084F217E105F000FF7C1 /* item */ = {isa = PBXFileReference; lastKnownFileType = folder; path = item; sourceTree = "<group>"; };
 		83A5417C2165FE0000E5ED99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83B1FFF921766A3C00D6C120 /* ChampionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionController.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				83EC7286217A418100F291D6 /* championFull.json */,
+				832101A32184D5EF000E36FC /* championImages */,
 				83EC7282217A17FF00F291D6 /* fonts */,
 				83EC727F2177961C00F291D6 /* loading */,
 				83EC727D2177951D00F291D6 /* champion */,
@@ -169,6 +176,8 @@
 				83EC7289217B574100F291D6 /* GoogleService-Info.plist */,
 				83F84589215165D2008BCE76 /* ViewController.swift */,
 				83F8458B215165D2008BCE76 /* Main.storyboard */,
+				832101A72184DBAD000E36FC /* myCell.swift */,
+				832101A52184D743000E36FC /* ChampionCollectionViewController.swift */,
 				83F8458E215165D2008BCE76 /* Assets.xcassets */,
 				83F84590215165D2008BCE76 /* LaunchScreen.storyboard */,
 				83F84593215165D2008BCE76 /* Info.plist */,
@@ -310,6 +319,7 @@
 				83B1FFFF21778FE200D6C120 /* champion.json in Resources */,
 				83F84592215165D2008BCE76 /* LaunchScreen.storyboard in Resources */,
 				83EC7288217A7D3800F291D6 /* Info.plist in Resources */,
+				832101A42184D5F0000E36FC /* championImages in Resources */,
 				83EC727E2177951D00F291D6 /* champion in Resources */,
 				83EC7283217A17FF00F291D6 /* fonts in Resources */,
 				83300850217E1060000FF7C1 /* item in Resources */,
@@ -424,9 +434,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A5417D2165FE0000E5ED99 /* LoginViewController.swift in Sources */,
+				832101A62184D744000E36FC /* ChampionCollectionViewController.swift in Sources */,
 				83F8458A215165D2008BCE76 /* ViewController.swift in Sources */,
 				83FBA5E1217CAFBA00899669 /* BiometricTest.swift in Sources */,
 				83B1FFFA21766A3C00D6C120 /* ChampionController.swift in Sources */,
+				832101A82184DBAD000E36FC /* myCell.swift in Sources */,
 				83F84588215165D2008BCE76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43HZLN99X8;
 				INFOPLIST_FILE = LeagueInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = issd.LeagueInfo;
@@ -618,6 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43HZLN99X8;
 				INFOPLIST_FILE = LeagueInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = issd.LeagueInfo;
