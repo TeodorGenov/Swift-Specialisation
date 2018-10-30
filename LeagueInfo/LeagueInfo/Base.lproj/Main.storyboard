@@ -27,26 +27,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqm-fe-IkG">
-                                <rect key="frame" x="165" y="342" width="46" height="34"/>
-                                <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="17"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="action:" destination="TRz-bs-EyO" eventType="touchUpInside" id="A19-AN-Wyg"/>
-                                    <action selector="newLogin:" destination="TRz-bs-EyO" eventType="touchUpInside" id="r7p-of-dNz"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ViewController" id="r6e-Zl-PrW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OMH-rP-fOZ">
-                                <rect key="frame" x="144" y="582" width="88" height="50"/>
+                                <rect key="frame" x="133" y="573" width="109" height="59"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="17"/>
                                 <state key="normal">
                                     <string key="title">Remember
      Name</string>
                                     <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.79724866151809692" green="0.69652587175369263" blue="0.50674188137054443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="action:" destination="TRz-bs-EyO" eventType="touchUpInside" id="4GO-00-qMn"/>
                                     <action selector="rememberLogin:" destination="TRz-bs-EyO" eventType="touchUpInside" id="Mwe-SI-TmM"/>
@@ -80,6 +81,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-Q3-q24">
                                 <rect key="frame" x="0.0" y="74" width="375" height="210"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqm-fe-IkG">
+                                <rect key="frame" x="151" y="335" width="72" height="56"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.81271570920944214" green="0.70838552713394165" blue="0.50939124822616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="action:" destination="TRz-bs-EyO" eventType="touchUpInside" id="A19-AN-Wyg"/>
+                                    <action selector="newLogin:" destination="TRz-bs-EyO" eventType="touchUpInside" id="r7p-of-dNz"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ViewController" id="r6e-Zl-PrW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -89,7 +115,7 @@
                             <constraint firstItem="KX0-Ui-ZrY" firstAttribute="leading" secondItem="AcH-YB-eqk" secondAttribute="leading" constant="62" id="CVE-be-bTv"/>
                             <constraint firstItem="KX0-Ui-ZrY" firstAttribute="top" secondItem="hH3-3D-dNd" secondAttribute="bottom" constant="-188" id="ELO-dP-KSx"/>
                             <constraint firstItem="hH3-3D-dNd" firstAttribute="centerX" secondItem="nqm-fe-IkG" secondAttribute="centerX" id="MGS-Vs-gjn"/>
-                            <constraint firstItem="OMH-rP-fOZ" firstAttribute="top" secondItem="hH3-3D-dNd" secondAttribute="bottom" constant="17" id="ObA-la-j1k"/>
+                            <constraint firstItem="OMH-rP-fOZ" firstAttribute="top" secondItem="hH3-3D-dNd" secondAttribute="bottom" constant="8" id="ObA-la-j1k"/>
                             <constraint firstItem="wDt-ju-6PH" firstAttribute="top" secondItem="wbS-Q3-q24" secondAttribute="bottom" constant="20" id="S3u-Sm-a26"/>
                             <constraint firstItem="wbS-Q3-q24" firstAttribute="leading" secondItem="AcH-YB-eqk" secondAttribute="leading" id="XvT-Sj-RAm"/>
                             <constraint firstItem="hH3-3D-dNd" firstAttribute="leading" secondItem="AcH-YB-eqk" secondAttribute="leading" constant="123" id="aZk-2W-dbF"/>
@@ -97,10 +123,10 @@
                             <constraint firstItem="wDt-ju-6PH" firstAttribute="centerX" secondItem="nqm-fe-IkG" secondAttribute="centerX" id="ega-2o-9Op"/>
                             <constraint firstItem="wDt-ju-6PH" firstAttribute="centerX" secondItem="7I4-C0-vfw" secondAttribute="centerX" id="fje-6d-bXT"/>
                             <constraint firstItem="OMH-rP-fOZ" firstAttribute="centerX" secondItem="KX0-Ui-ZrY" secondAttribute="centerX" id="gWa-r3-3lk"/>
-                            <constraint firstItem="nqm-fe-IkG" firstAttribute="top" secondItem="wDt-ju-6PH" secondAttribute="bottom" constant="8" id="gmS-py-jrO"/>
+                            <constraint firstItem="nqm-fe-IkG" firstAttribute="top" secondItem="wDt-ju-6PH" secondAttribute="bottom" constant="1" id="gmS-py-jrO"/>
                             <constraint firstItem="AcH-YB-eqk" firstAttribute="bottom" secondItem="OMH-rP-fOZ" secondAttribute="bottom" constant="146" id="k8q-TV-oHc"/>
                             <constraint firstItem="wbS-Q3-q24" firstAttribute="centerX" secondItem="wDt-ju-6PH" secondAttribute="centerX" id="tXf-tg-Gxi"/>
-                            <constraint firstItem="OMH-rP-fOZ" firstAttribute="leading" secondItem="AcH-YB-eqk" secondAttribute="leading" constant="144" id="tyB-65-hbb"/>
+                            <constraint firstItem="OMH-rP-fOZ" firstAttribute="leading" secondItem="AcH-YB-eqk" secondAttribute="leading" constant="133" id="tyB-65-hbb"/>
                             <constraint firstItem="wDt-ju-6PH" firstAttribute="top" secondItem="AcH-YB-eqk" secondAttribute="top" constant="260" id="uG6-3j-QWP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AcH-YB-eqk"/>
@@ -200,29 +226,55 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="IYS-XA-AwU"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MkA-PE-gOY">
-                                <rect key="frame" x="260" y="79" width="106" height="70"/>
-                                <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
-                                <state key="normal" title="Champion       Info">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="showChamps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92b-7P-s1N"/>
-                                    <segue destination="lqI-sK-eqz" kind="show" id="aDP-pg-R8n"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-72-QYR">
                                 <rect key="frame" x="0.0" y="93" width="97" height="42"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="zjU-P0-4lo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.74702364206314087" green="0.657096266746521" blue="0.48107898235321045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onButtonPressed:" destination="pro-qa-C5d" eventType="touchUpInside" id="2zJ-tF-9QK"/>
                                     <segue destination="TRz-bs-EyO" kind="show" id="sSP-jl-5y2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MkA-PE-gOY">
+                                <rect key="frame" x="260" y="79" width="106" height="70"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
+                                <state key="normal" title="Champion       Info">
+                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.78968715667724609" green="0.69255870580673218" blue="0.50283968448638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showChamps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92b-7P-s1N"/>
+                                    <segue destination="lqI-sK-eqz" kind="show" id="aDP-pg-R8n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -312,8 +364,42 @@
                                     <outlet property="delegate" destination="lqI-sK-eqz" id="ZC0-kP-pzg"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lTb-02-CH4">
+                                <rect key="frame" x="152" y="59" width="71" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal">
+                                    <string key="title">    Show
+Champion</string>
+                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.83179467916488647" green="0.72026681900024414" blue="0.51656621694564819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showChampion:" destination="lqI-sK-eqz" eventType="touchUpInside" id="B98-DZ-qPa"/>
+                                    <segue destination="pro-qa-C5d" kind="show" identifier="ChampionController" id="Zam-g3-EMo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a Champion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv2-iU-0bx">
+                                <rect key="frame" x="91" y="114" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hog-8f-gAG">
-                                <rect key="frame" x="16" y="31" width="61" height="35"/>
+                                <rect key="frame" x="16" y="61" width="61" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Back">
@@ -331,89 +417,6 @@
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xiq-wD-Q1X">
-                                <rect key="frame" x="292" y="105" width="67" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal">
-                                    <string key="title">Reset
-Order</string>
-                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.83179467920000005" green="0.720266819" blue="0.51656621690000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TcO-E1-OcH">
-                                <rect key="frame" x="16" y="105" width="67" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal">
-                                    <string key="title">  Order 
-By Name</string>
-                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.83179467920000005" green="0.720266819" blue="0.51656621690000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="orderByName:" destination="lqI-sK-eqz" eventType="touchUpInside" id="5Q6-db-0Wz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a Champion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv2-iU-0bx">
-                                <rect key="frame" x="91" y="114" width="193" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lTb-02-CH4">
-                                <rect key="frame" x="157" y="44" width="61" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal">
-                                    <string key="title">    Show
-Champion</string>
-                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.83179467916488647" green="0.72026681900024414" blue="0.51656621694564819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showChampion:" destination="lqI-sK-eqz" eventType="touchUpInside" id="B98-DZ-qPa"/>
-                                    <segue destination="pro-qa-C5d" kind="show" identifier="ChampionController" id="Zam-g3-EMo"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,53 +454,14 @@ Champion</string>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBZ-tZ-FaJ">
                                                 <rect key="frame" x="0.0" y="106" width="375" height="623"/>
                                             </scrollView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niY-1W-yfq">
-                                                <rect key="frame" x="8" y="46" width="97" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="97" id="j5d-Qt-gqQ"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-MI-Q0s">
-                                                <rect key="frame" x="123" y="40" width="97" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="97" id="3a5-B5-TtY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
-                                                <state key="normal">
-                                                    <string key="title">   Show
-Champion</string>
-                                                    <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="onButtonPressed:" destination="pro-qa-C5d" eventType="touchUpInside" id="KLA-4c-cBS"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4f-eV-uyU">
-                                                <rect key="frame" x="228" y="61" width="133" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="3Sb-Cz-td2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
-                                                <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuH-A2-8Lz">
-                                                <rect key="frame" x="228" y="18" width="133" height="37"/>
-                                                <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="22"/>
-                                                <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lore:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-ZN-OuS">
-                                                <rect key="frame" x="17" y="742" width="42" height="22"/>
+                                                <rect key="frame" x="17" y="742" width="42" height="21.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="17"/>
                                                 <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips playing: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76X-fC-kCg">
-                                                <rect key="frame" x="17" y="881" width="103" height="22"/>
+                                                <rect key="frame" x="17" y="881" width="103" height="21.666666666666629"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="103" id="gNK-Ow-fPp"/>
                                                 </constraints>
@@ -526,7 +490,7 @@ Champion</string>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips against: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-4f-sew">
-                                                <rect key="frame" x="15" y="1022" width="103" height="22"/>
+                                                <rect key="frame" x="15" y="1021.6666666666666" width="103" height="21.666666666666629"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="103" id="1fr-bw-foe"/>
                                                 </constraints>
@@ -535,7 +499,7 @@ Champion</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage set: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94n-6i-h2J">
-                                                <rect key="frame" x="17" y="1180" width="103" height="20"/>
+                                                <rect key="frame" x="17" y="1179.3333333333333" width="103" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="PZu-vg-HWh"/>
                                                     <constraint firstAttribute="width" constant="103" id="qCO-ho-VKc"/>
@@ -555,7 +519,7 @@ Champion</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-63-LKu">
-                                                <rect key="frame" x="60" y="1052" width="299" height="96"/>
+                                                <rect key="frame" x="60" y="1051.3333333333333" width="299" height="96"/>
                                                 <color key="tintColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="96" id="owB-8z-EhW"/>
@@ -565,7 +529,8 @@ Champion</string>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-yn-cPA">
-                                                <rect key="frame" x="0.0" y="0.0" width="97" height="42"/>
+                                                <rect key="frame" x="8" y="40" width="97" height="34"/>
+                                                <color key="backgroundColor" red="0.01176470588" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="nhP-VV-Twh"/>
                                                 </constraints>
@@ -573,39 +538,51 @@ Champion</string>
                                                 <state key="normal" title="Back">
                                                     <color key="titleColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBound" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="0.70881778001785278" green="0.63328838348388672" blue="0.47579938173294067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="btnBack:" destination="pro-qa-C5d" eventType="touchUpInside" id="hrc-KN-77v"/>
                                                     <action selector="onButtonPressed:" destination="pro-qa-C5d" eventType="touchUpInside" id="oqe-RO-sQz"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ChampController" id="FQm-Og-1Wa"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sJL-PL-nx6">
-                                                <rect key="frame" x="123" y="1170" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJL-PL-nx6">
+                                                <rect key="frame" x="123" y="1169.3333333333333" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="6j7-0e-yLP"/>
                                                     <constraint firstAttribute="width" constant="64" id="YM6-VR-7m4"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-KZ-BEZ">
-                                                <rect key="frame" x="197" y="1170" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-KZ-BEZ">
+                                                <rect key="frame" x="197" y="1169.3333333333333" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="lPK-sf-4hx"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-vN-6Jp">
-                                                <rect key="frame" x="271" y="1170" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vep-vN-6Jp">
+                                                <rect key="frame" x="271" y="1169.3333333333333" width="64" height="64"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-mS-PAY">
-                                                <rect key="frame" x="123" y="1242" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-mS-PAY">
+                                                <rect key="frame" x="123" y="1241.3333333333333" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="DB7-g7-hJg"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Jd-rt-thJ">
-                                                <rect key="frame" x="197" y="1242" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Jd-rt-thJ">
+                                                <rect key="frame" x="197" y="1241.3333333333333" width="64" height="64"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gmV-9H-01o">
-                                                <rect key="frame" x="271" y="1242" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmV-9H-01o">
+                                                <rect key="frame" x="271" y="1241.3333333333333" width="64" height="64"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage set: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voc-9y-wEV">
                                                 <rect key="frame" x="15" y="1463" width="103" height="20"/>
@@ -627,9 +604,23 @@ Champion</string>
                                                 <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4f-eV-uyU">
+                                                <rect key="frame" x="155" y="62" width="112" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="3Sb-Cz-td2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BeaufortforLOL-Regular" family="BeaufortforLOL-Regular" pointSize="17"/>
+                                                <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuH-A2-8Lz">
+                                                <rect key="frame" x="155" y="29" width="112" height="39"/>
+                                                <fontDescription key="fontDescription" name="BeaufortforLOL-Bold" family="BeaufortforLOL-Bold" pointSize="22"/>
+                                                <color key="textColor" red="0.78823529410000004" green="0.66666666669999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="niY-1W-yfq" firstAttribute="centerY" secondItem="vU7-MI-Q0s" secondAttribute="centerY" id="08x-sR-OrA"/>
                                             <constraint firstItem="1Jd-rt-thJ" firstAttribute="top" secondItem="gmV-9H-01o" secondAttribute="top" id="0NN-v7-EKb"/>
                                             <constraint firstItem="Vep-vN-6Jp" firstAttribute="leading" secondItem="gmV-9H-01o" secondAttribute="leading" id="1Og-ms-hni"/>
                                             <constraint firstItem="94n-6i-h2J" firstAttribute="leading" secondItem="76X-fC-kCg" secondAttribute="leading" id="2Eh-uK-pfI"/>
@@ -637,10 +628,9 @@ Champion</string>
                                             <constraint firstItem="MHg-Ol-JBA" firstAttribute="leading" secondItem="0gM-8B-u42" secondAttribute="leading" id="7H7-9C-Esy"/>
                                             <constraint firstItem="ecE-4f-sew" firstAttribute="leading" secondItem="cpV-Bw-Sxc" secondAttribute="leading" constant="15" id="7Qi-oW-Y1v"/>
                                             <constraint firstItem="Vep-vN-6Jp" firstAttribute="trailing" secondItem="gmV-9H-01o" secondAttribute="trailing" id="85L-XY-aom"/>
-                                            <constraint firstItem="qa5-yn-cPA" firstAttribute="top" secondItem="cpV-Bw-Sxc" secondAttribute="top" id="8Wx-gP-li2"/>
+                                            <constraint firstItem="qa5-yn-cPA" firstAttribute="top" secondItem="cpV-Bw-Sxc" secondAttribute="top" constant="40" id="8Wx-gP-li2"/>
                                             <constraint firstItem="Fg0-mS-PAY" firstAttribute="top" secondItem="1Jd-rt-thJ" secondAttribute="top" id="9sl-ip-N1k"/>
                                             <constraint firstItem="0gM-8B-u42" firstAttribute="leading" secondItem="voc-9y-wEV" secondAttribute="leading" id="A29-I3-Ceg"/>
-                                            <constraint firstItem="eBZ-tZ-FaJ" firstAttribute="top" secondItem="vU7-MI-Q0s" secondAttribute="bottom" constant="24" id="ARc-QR-cSI"/>
                                             <constraint firstItem="d3A-63-LKu" firstAttribute="top" secondItem="ecE-4f-sew" secondAttribute="bottom" constant="8" symbolic="YES" id="AXV-DU-hqv"/>
                                             <constraint firstAttribute="trailing" secondItem="Vep-vN-6Jp" secondAttribute="trailing" constant="40" id="BC9-gK-9CH"/>
                                             <constraint firstItem="dwC-KZ-BEZ" firstAttribute="top" secondItem="Vep-vN-6Jp" secondAttribute="top" id="BY8-p0-NiE"/>
@@ -654,10 +644,9 @@ Champion</string>
                                             <constraint firstItem="MHg-Ol-JBA" firstAttribute="leading" secondItem="ecE-4f-sew" secondAttribute="leading" id="J9L-EJ-fAK"/>
                                             <constraint firstItem="VJb-ZN-OuS" firstAttribute="top" secondItem="l4Z-3J-klP" secondAttribute="top" id="Jpi-Lm-3Nk"/>
                                             <constraint firstAttribute="trailing" secondItem="SmA-d9-cFe" secondAttribute="trailing" constant="14" id="Mhm-y7-XBS"/>
-                                            <constraint firstItem="JuH-A2-8Lz" firstAttribute="top" secondItem="cpV-Bw-Sxc" secondAttribute="top" constant="18" id="OrI-DG-ICR"/>
+                                            <constraint firstItem="JuH-A2-8Lz" firstAttribute="top" secondItem="cpV-Bw-Sxc" secondAttribute="top" constant="29" id="OrI-DG-ICR"/>
                                             <constraint firstItem="76X-fC-kCg" firstAttribute="top" secondItem="l4Z-3J-klP" secondAttribute="bottom" constant="11" id="P82-xD-6Wz"/>
                                             <constraint firstItem="dwC-KZ-BEZ" firstAttribute="leading" secondItem="1Jd-rt-thJ" secondAttribute="leading" id="PVM-ts-bT8"/>
-                                            <constraint firstItem="JuH-A2-8Lz" firstAttribute="leading" secondItem="vU7-MI-Q0s" secondAttribute="trailing" constant="8" symbolic="YES" id="PyH-YX-jJk"/>
                                             <constraint firstItem="sJL-PL-nx6" firstAttribute="trailing" secondItem="Fg0-mS-PAY" secondAttribute="trailing" id="QR4-nF-c1M"/>
                                             <constraint firstItem="SmA-d9-cFe" firstAttribute="leading" secondItem="cpV-Bw-Sxc" secondAttribute="leading" constant="62" id="STo-Lh-kKp"/>
                                             <constraint firstItem="VJb-ZN-OuS" firstAttribute="top" secondItem="eBZ-tZ-FaJ" secondAttribute="bottom" constant="13" id="Sxt-Ib-KsQ"/>
@@ -665,10 +654,8 @@ Champion</string>
                                             <constraint firstItem="VJb-ZN-OuS" firstAttribute="leading" secondItem="cpV-Bw-Sxc" secondAttribute="leading" constant="17" id="V4d-78-ERK"/>
                                             <constraint firstItem="Fg0-mS-PAY" firstAttribute="bottom" secondItem="1Jd-rt-thJ" secondAttribute="bottom" id="WIe-pE-fHY"/>
                                             <constraint firstItem="ecE-4f-sew" firstAttribute="top" secondItem="SmA-d9-cFe" secondAttribute="bottom" constant="15" id="WeP-qd-gCs"/>
-                                            <constraint firstItem="sJL-PL-nx6" firstAttribute="leading" secondItem="vU7-MI-Q0s" secondAttribute="leading" id="YDn-20-fSl"/>
-                                            <constraint firstItem="SmA-d9-cFe" firstAttribute="trailing" secondItem="z4f-eV-uyU" secondAttribute="trailing" id="YNy-ob-Jg5"/>
+                                            <constraint firstItem="SmA-d9-cFe" firstAttribute="trailing" secondItem="z4f-eV-uyU" secondAttribute="trailing" constant="94" id="YNy-ob-Jg5"/>
                                             <constraint firstItem="dwC-KZ-BEZ" firstAttribute="leading" secondItem="sJL-PL-nx6" secondAttribute="trailing" constant="10" id="YTS-Ui-5vG"/>
-                                            <constraint firstItem="z4f-eV-uyU" firstAttribute="bottom" secondItem="vU7-MI-Q0s" secondAttribute="bottom" id="YoP-XM-PP8"/>
                                             <constraint firstItem="dwC-KZ-BEZ" firstAttribute="trailing" secondItem="1Jd-rt-thJ" secondAttribute="trailing" id="YoZ-Z5-Z7e"/>
                                             <constraint firstItem="gmV-9H-01o" firstAttribute="top" secondItem="Vep-vN-6Jp" secondAttribute="bottom" constant="8" symbolic="YES" id="ZL5-Hu-6OJ"/>
                                             <constraint firstItem="sJL-PL-nx6" firstAttribute="leading" secondItem="Fg0-mS-PAY" secondAttribute="leading" id="bKo-fY-VYf"/>
@@ -676,21 +663,17 @@ Champion</string>
                                             <constraint firstItem="voc-9y-wEV" firstAttribute="top" secondItem="0gM-8B-u42" secondAttribute="bottom" constant="71" id="cqP-1U-Xqb"/>
                                             <constraint firstAttribute="trailing" secondItem="d3A-63-LKu" secondAttribute="trailing" constant="16" id="fW3-Nr-SIW"/>
                                             <constraint firstItem="Vep-vN-6Jp" firstAttribute="leading" secondItem="dwC-KZ-BEZ" secondAttribute="trailing" constant="10" id="geI-PL-okT"/>
-                                            <constraint firstItem="z4f-eV-uyU" firstAttribute="top" secondItem="JuH-A2-8Lz" secondAttribute="bottom" constant="6" id="iV6-Zg-p0X"/>
+                                            <constraint firstItem="z4f-eV-uyU" firstAttribute="top" secondItem="JuH-A2-8Lz" secondAttribute="bottom" constant="-6" id="iV6-Zg-p0X"/>
                                             <constraint firstAttribute="height" constant="2000" id="itf-mF-kSI"/>
                                             <constraint firstItem="JuH-A2-8Lz" firstAttribute="leading" secondItem="z4f-eV-uyU" secondAttribute="leading" id="kEZ-cB-xOo"/>
                                             <constraint firstAttribute="bottom" secondItem="eBZ-tZ-FaJ" secondAttribute="bottom" constant="1271" id="kgh-Gl-G8o"/>
-                                            <constraint firstItem="SmA-d9-cFe" firstAttribute="trailing" secondItem="JuH-A2-8Lz" secondAttribute="trailing" id="lII-oX-K1e"/>
-                                            <constraint firstItem="niY-1W-yfq" firstAttribute="top" secondItem="qa5-yn-cPA" secondAttribute="bottom" constant="4" id="lQd-st-MAc"/>
-                                            <constraint firstItem="vU7-MI-Q0s" firstAttribute="leading" secondItem="niY-1W-yfq" secondAttribute="trailing" constant="18" id="lhw-wW-HpI"/>
+                                            <constraint firstItem="SmA-d9-cFe" firstAttribute="trailing" secondItem="JuH-A2-8Lz" secondAttribute="trailing" constant="94" id="lII-oX-K1e"/>
                                             <constraint firstAttribute="bottom" secondItem="0gM-8B-u42" secondAttribute="bottom" constant="608" id="mVG-7n-lOe"/>
                                             <constraint firstItem="94n-6i-h2J" firstAttribute="top" secondItem="d3A-63-LKu" secondAttribute="bottom" constant="32" id="pGi-O8-Tji"/>
                                             <constraint firstItem="l4Z-3J-klP" firstAttribute="leading" secondItem="VJb-ZN-OuS" secondAttribute="trailing" constant="8" symbolic="YES" id="qIp-sq-S2l"/>
-                                            <constraint firstItem="vU7-MI-Q0s" firstAttribute="top" secondItem="cpV-Bw-Sxc" secondAttribute="top" constant="40" id="qYj-Ar-mw9"/>
                                             <constraint firstItem="1Jd-rt-thJ" firstAttribute="top" secondItem="dwC-KZ-BEZ" secondAttribute="bottom" constant="8" symbolic="YES" id="rRV-6m-xRX"/>
                                             <constraint firstAttribute="trailing" secondItem="eBZ-tZ-FaJ" secondAttribute="trailing" id="s1h-dv-7DM"/>
-                                            <constraint firstItem="niY-1W-yfq" firstAttribute="leading" secondItem="cpV-Bw-Sxc" secondAttribute="leadingMargin" id="uxZ-6V-tHQ"/>
-                                            <constraint firstItem="qa5-yn-cPA" firstAttribute="leading" secondItem="eBZ-tZ-FaJ" secondAttribute="leading" id="vhz-ug-rih"/>
+                                            <constraint firstItem="qa5-yn-cPA" firstAttribute="leading" secondItem="eBZ-tZ-FaJ" secondAttribute="leading" constant="8" id="vhz-ug-rih"/>
                                             <constraint firstItem="Fg0-mS-PAY" firstAttribute="top" secondItem="sJL-PL-nx6" secondAttribute="bottom" constant="8" symbolic="YES" id="xyO-US-ftt"/>
                                             <constraint firstItem="VJb-ZN-OuS" firstAttribute="leading" secondItem="76X-fC-kCg" secondAttribute="leading" id="z5k-aT-l1w"/>
                                         </constraints>
@@ -718,7 +701,6 @@ Champion</string>
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
-                        <outlet property="btnDisplayChamp" destination="vU7-MI-Q0s" id="ta3-Ee-bjr"/>
                         <outlet property="imageScroll" destination="eBZ-tZ-FaJ" id="I39-c8-J8v"/>
                         <outlet property="ivItem1" destination="sJL-PL-nx6" id="6Ma-c5-Vh3"/>
                         <outlet property="ivItem2" destination="dwC-KZ-BEZ" id="Nxw-Pa-Fxn"/>
@@ -728,7 +710,6 @@ Champion</string>
                         <outlet property="ivItem6" destination="gmV-9H-01o" id="mEb-Ce-X4W"/>
                         <outlet property="lblChampName" destination="JuH-A2-8Lz" id="Ayi-5O-cu0"/>
                         <outlet property="lblChampNick" destination="z4f-eV-uyU" id="VZx-oa-QkP"/>
-                        <outlet property="tfChampName" destination="niY-1W-yfq" id="J4V-gP-qDM"/>
                         <outlet property="tvLore" destination="l4Z-3J-klP" id="H28-hj-Qww"/>
                         <outlet property="tvTipsAgains" destination="SmA-d9-cFe" id="naL-Sc-L6t"/>
                         <outlet property="tvTipsFightingHim" destination="d3A-63-LKu" id="9e7-R8-Vn0"/>
@@ -743,7 +724,6 @@ Champion</string>
         <image name="coming_soon" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zam-g3-EMo"/>
-        <segue reference="FQm-Og-1Wa"/>
+        <segue reference="r6e-Zl-PrW"/>
     </inferredMetricsTieBreakers>
 </document>
